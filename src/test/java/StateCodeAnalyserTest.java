@@ -16,7 +16,7 @@ public class StateCodeAnalyserTest {
             e.printStackTrace();
         }
     }
-/*
+
     @Test
     public void GivenStateCensusCsvFile_If_DoesntExist_ShouldThrowCensusAnalyserException() throws IOException {
         try {
@@ -26,7 +26,7 @@ public class StateCodeAnalyserTest {
             Assert.assertEquals(CensusException.CensusExceptionType.NO_SUCH_FILE, e.type);
         }
     }
-
+/*
     @Test
     public void GivenTheStateCensusCsvFile_FileExtIncorrect_ShouldThrow_CensusException() throws IOException {
         try {
