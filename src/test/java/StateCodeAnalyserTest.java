@@ -26,7 +26,7 @@ public class StateCodeAnalyserTest {
             Assert.assertEquals(CensusException.CensusExceptionType.NO_SUCH_FILE, e.type);
         }
     }
-/*
+
     @Test
     public void GivenTheStateCensusCsvFile_FileExtIncorrect_ShouldThrow_CensusException() throws IOException {
         try {
@@ -36,7 +36,7 @@ public class StateCodeAnalyserTest {
             Assert.assertEquals(CensusException.CensusExceptionType.INCORRECT_DATA_ISSUE, e.type);
         }
     }
-
+/*
     @Test
     public void GivenStateCensusCSVFile_DelimiterIncorrect_ReturnsCensusException() throws IOException {
         try {
@@ -45,6 +45,15 @@ public class StateCodeAnalyserTest {
             e.printStackTrace();
             Assert.assertEquals(CensusException.CensusExceptionType.DELIMITER_ISSUE, e.type);
 
+        }
+    }
+    @Test
+    public void whenCorrectCensusCSVFile_HeaderNotCorrect_ShouldReturnFalse() throws IOException {
+        try {
+            int count = StateCensusAnalyser.openCsvBuilder(STATECENSUS_CSVFILE, StateCensus.class);
+        } catch (CensusException e) {
+            e.printStackTrace();
+            Assert.assertEquals(CensusException.CensusExceptionType.INCORRECT_DATA_ISSUE, e.type);
         }
     }
 
