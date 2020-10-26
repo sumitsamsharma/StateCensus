@@ -36,7 +36,7 @@ public class StateCodeAnalyserTest {
             Assert.assertEquals(CensusException.CensusExceptionType.INCORRECT_DATA_ISSUE, e.type);
         }
     }
-/*
+
     @Test
     public void GivenStateCensusCSVFile_DelimiterIncorrect_ReturnsCensusException() throws IOException {
         try {
@@ -47,6 +47,7 @@ public class StateCodeAnalyserTest {
 
         }
     }
+    /*
     @Test
     public void whenCorrectCensusCSVFile_HeaderNotCorrect_ShouldReturnFalse() throws IOException {
         try {
