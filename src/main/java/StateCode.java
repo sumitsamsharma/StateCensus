@@ -8,69 +8,69 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.Iterator;
-public class StateCensus {
+public class StateCode {
 
-    @CsvBindByName(column = "State")
-    private String stateName;
+    @CsvBindByName(column = "SrNo")
+    private String srNo;
 
-    @CsvBindByName(column = "Population",required = true)
-    private String population;
+    @CsvBindByName(column = "State",required = true)
+    private String state;
 
-    @CsvBindByName(column = "AreaInSqKm")
-    private String areaInSqKm;
+    @CsvBindByName(column = "Name")
+    private String Name;
 
-    @CsvBindByName(column = "DensityPerSqKm", required = true)
-    private String densityPerSqKm;
+    @CsvBindByName(column = "TIN", required = true)
+    private String Tin;
 
-    public StateCensus() {
+    public StateCode() {
 
     }
 
-    public String getStateName() {
-        return stateName;
+    public String getSrNo() {
+        return srNo;
     }
 
-    public void setStateName(String stateName) {
-        this.stateName = stateName;
+    public void setSrNo(String srNo) {
+        this.srNo = srNo;
     }
 
-    public String getPopulation() {
-        return population;
+    public String getState() {
+        return state;
     }
 
-    public void setPopulation(String population) {
-        this.population = population;
+    public void setState(String state) {
+        this.state=state;
     }
 
-    public String getAreaInSqKm() {
-        return areaInSqKm;
+    public void setName(String name) {
+        this.Name = name;
     }
 
-    public void setAreaInSqKm(String areaInSqKm) {
-        this.areaInSqKm = areaInSqKm;
+    public String getName() {
+        return Name;
     }
 
-    public String getDensityPerSqKm() {
-        return densityPerSqKm;
+    public void setTin(String Tin) {
+        this.Tin = Tin;
+    }
+    public String getTin() {
+        return Tin;
     }
 
-    public void setDensityPerSqKm(String densityPerSqKm) {
-        this.densityPerSqKm = densityPerSqKm;
-    }
+
 
     @Override
     public String toString() {
-        return  "stateName='" + stateName + '\'' +
-                ", population='" + population + '\'' +
-                ", areaInSqKm='" + areaInSqKm + '\'' +
-                ", densityPerSqKm='" + densityPerSqKm + '\''
-                +"\n";
+        return  "srNo='" + srNo + '\'' +
+                ", StateName='" + state + '\'' +
+                ", Name='" + Name + '\'' +
+                ", TIN ='" + Tin + '\'' +"\n";
     }
 }
 
-class StateCensusAnalyser {
+class StateCodeAnalyser {
 
-    public StateCensusAnalyser() {
+    public StateCodeAnalyser() {
     }
 
     public static <E>  int openCsvBuilder(String csvFilePath, Object myClass) throws CensusException {
