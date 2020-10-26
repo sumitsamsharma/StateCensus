@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-26T17:46:29" hostname="DESKTOP-7FT5EBS" time="0.435">
+<testsuite name="StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-26T18:00:14" hostname="DESKTOP-7FT5EBS" time="0.463">
   <properties/>
-  <testcase name="GivenTheStateCodesCsvFile_IfHasCorrectNumberOfRecords_ShouldReturnTrue" classname="StateCensusAnalyserTest" time="0.435"/>
+  <testcase name="GivenStateCensusCSVFile_DelimiterIncorrect_ReturnsCensusException" classname="StateCensusAnalyserTest" time="0.463"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[CensusException: Error related to delimiter at record no. : 27
 	at StateCensusAnalyser.openCsvBuilder(StateCensus.java:87)
-	at StateCensusAnalyserTest.GivenTheStateCodesCsvFile_IfHasCorrectNumberOfRecords_ShouldReturnTrue(StateCensusAnalyserTest.java:12)
+	at StateCensusAnalyserTest.GivenStateCensusCSVFile_DelimiterIncorrect_ReturnsCensusException(StateCensusAnalyserTest.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
